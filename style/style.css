@@ -1,0 +1,561 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,body {
+    background-image: url(../img/walpaper.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+
+@keyframes entrada {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Utilitarios */
+
+hr{
+    height: 5px;
+    background-color: #330c42;
+    border-radius: 5px;    
+}
+
+
+.logo{
+    width: 10vh;
+    height: auto;
+    cursor: pointer;
+}
+
+.tittle{
+    text-align: center;
+    font-family:'Lily Script One', cursive;
+    font-size: 2rem;
+    color: #eee;
+    text-shadow: 5px 5px 1.5rem #000;
+    animation: entrada 3s;       
+}
+
+.tittle-main{
+    font-family:'Lily Script One', cursive;
+    font-size: 4rem;
+    color: #eee;
+    text-shadow: 5px 5px 1.5rem #000;
+    animation: entrada 3s;
+}
+
+.paragraph-galery{
+    color: #eee;
+    text-shadow: 5px 5px .5rem #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+
+/*Navbar*/
+
+.navbar{
+max-width: 100%;
+background: rgba(217, 69, 215, 0.377);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 7.5px );
+-webkit-backdrop-filter: blur( 7.5px );
+border-radius:0 0 30px 30px;
+border: 1px solid rgba(255, 255, 255, 0.089);
+display: flex;
+flex-direction: row;
+}
+
+.navbar-item{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-link{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    display: flex;
+    padding: 0 5vh;    
+    cursor: pointer;     
+    transition: all 300ms ease;
+}
+
+
+.navbar-link:hover{
+    background: rgba(217, 69, 215, 0.377);
+    color: #eee;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+/*Conteudo Principal*/
+
+.container{
+background: rgba(217, 69, 215, 0.377);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 7.5px );
+-webkit-backdrop-filter: blur( 7.5px );
+border-radius:0 0 30px 30px;
+border: 1px solid rgba(255, 255, 255, 0.089);
+margin-top: 5vh;
+padding:2vh;
+border-radius: 1.9vh;
+}
+
+/*Sobre*/
+
+.about{
+    background-image: url(../img/quadro-de-ingredientes-alimentares-para-assar-em-um-fundo-pastel-levemente-rosa-cozinhar-plana-leigos-com-espaco-de-copia-vista-do-topo-conceito-de-cozimento-postura-plana.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    margin: 5vh 0;
+    border-radius: 3vh;
+    padding: 3vh;
+    animation: entrada 3s;    
+}
+
+.paragraph-about{
+    text-align: justify;
+    margin: 0 25vh;    
+}
+
+/*Galeria*/
+
+.galery{
+text-align: center;
+}
+
+.carousel{
+    max-width: 50vh;
+    height: auto;
+    display: flex;
+    padding-top: 2vh;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;    
+    left: 30%;
+}
+
+/*Cards*/
+.card-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-gap: 5vh;    
+    padding: 2vh;
+    margin: 1.6vh 0;    
+}
+
+.card {
+    position: relative;
+    width: 50%;
+  }
+  
+.card-image {
+    opacity: 1;
+    display: block;
+    width: 20rem;
+    height: 15rem;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+  
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+  
+.card:hover .card-image {
+    opacity: 0.3;
+}
+  
+.middle:hover {
+    opacity: 1;
+}
+  
+.text {
+    background-color: #9d1dcf;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+/*Icones*/
+.icons-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;      
+
+}
+
+.icons{
+    padding: 3vh;    
+    --fa-animation-duration: 3s;
+    cursor: pointer;            
+}
+
+.tooltip1 {
+    position: relative;    
+}
+  
+.tooltip1::after {
+    content: "Instagram";
+    text-align: center;
+    position: absolute;
+    padding: 4px;
+    bottom: 210px;
+    left: 45px;
+    font-size: 12px;
+    background: rgba(24, 0, 31, 0.712);
+    color: #eee;
+    width: 75px;
+    font-weight: bold;
+    height: 25px;
+    opacity: 0;
+    transition: opacity 500ms, transform 500ms;
+    border-radius: 5px;
+}  
+.tooltip1:is(:hover, :focus)::after {
+    opacity: 1;
+    transform: translateY(50px);
+}
+
+.tooltip2 {
+    position: relative;
+}
+.tooltip2::after {
+    content: "Whatsapp";
+    text-align: center;
+    position: absolute;
+    padding: 5px;
+    bottom: 215px;
+    left: 48px;
+    font-size: 12px;
+    background: rgba(24, 0, 31, 0.712);
+    color: #eee;
+    width: 75px;
+    font-weight: bold;
+    height: 25px;
+    opacity: 0;
+    transition: opacity 500ms, transform 500ms;
+    border-radius: 5px;
+}
+  
+.tooltip2:is(:hover, :focus)::after {
+    opacity: 1;
+    transform: translateY(60px);
+}
+
+/*Footer*/
+
+.footer{
+    background-color: #9d1dcf63;
+    color: #eee ;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    padding: .5vh;
+    margin-top: 3vh;
+}
+
+/*Media Query*/
+@media (max-width: 280px){
+    
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        background-size: cover;
+    }
+
+    .tittle-main{
+        font-size: 3vh;
+    }
+    .navbar-item{        
+        font-size: 1.3vh;              
+    }
+
+    .navbar-link{
+        padding: 3px;
+    }
+
+    .about{
+       
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+        margin: 3vh 0;
+        border-radius: 3vh;
+        padding: 2vh;
+        animation: entrada 3s;    
+    }
+
+    .tittle{
+        text-align: center;
+        font-family:'Lily Script One', cursive;
+        font-size: 2rem;
+        color: #eee;
+        text-shadow: 5px 5px 1.5rem #000;
+        animation: entrada 3s;       
+    }
+
+    .paragraph-about{
+        font-size: 10px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .galery{
+        max-width: 100%;
+        right: 0;        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel{
+        max-width: 100%;
+        left: 0;
+    }
+
+    .card-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 10rem;
+    }
+
+    .card{
+        width: 5rem;
+        height: auto;
+    }
+
+    .icons-content{
+        font-size: 12px;
+    }
+
+}
+@media (max-width: 320px){
+    
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        background-size: cover;
+    }
+
+    .tittle-main{
+        font-size: 4vh;
+    }
+    .navbar-item{        
+        font-size: 1.4vh;              
+    }
+
+    .navbar-link{
+        padding-left: 1 vh;
+    }
+
+    .about{       
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+        margin: 3vh 0;
+        border-radius: 3vh;
+        padding: 2vh;
+        animation: entrada 3s;    
+    }
+
+    .paragraph-about{
+        font-size: 11px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .galery{
+        max-width: 100%;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+    }
+
+    .carousel{
+        max-width: 100%;
+        left: 0;
+    }
+
+    .card-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 375px){
+    
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        background-size: cover;
+    }
+
+    .tittle-main{
+        font-size: 4vh;
+    }
+    .navbar-item{        
+        font-size: 1.4vh;              
+    }
+
+    .navbar-link{
+        padding: 3px;
+    }
+
+    .paragraph-about{
+        font-size: 11px;
+        text-align: justify;
+        margin: 0;
+    }
+
+    .galery{
+        max-width: 100%;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel{
+        max-width: 100%;
+        left: 0;
+    }
+
+    .card-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 590px){
+    
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        background-size: cover;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .tittle-main{
+        font-size: 4vh;
+    }
+    .navbar-item{        
+        font-size: 1.6vh;              
+    }
+
+    .navbar-link{
+        padding: 3px;
+    }
+
+    .paragraph-about{
+        font-size: 12px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .galery{
+        max-width: 100%;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel{
+        width: 100%;
+        left: 5px;        
+    }
+
+    .card-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 768px){
+
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        background-size: cover;
+    }
+    
+
+    .paragraph-about{
+        font-size: 13px;
+        text-align: justify;
+        margin: 0 3vh;
+    }
+
+    /*.carousel{
+        max-width: 70%;
+        left: 18%;
+    }*/
+
+}
+
+
+
+
